@@ -1,27 +1,29 @@
-// function userInfo() {
-//     let userEmail = 'maria@email.com';
-  
-//     // Toda expressão dentro do escopo da função userInfo tem acesso à variável userEmail
-//     console.log(userEmail);
+// function testingScope(escopo) {
+//   if (escopo === true) {
+//     var ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
+//     ifScope = ifScope + ' ótimo, fui utilizada no escopo !';
+//     console.log(ifScope);
+//   } else {
+//     var elseScope = 'Não devo ser utilizada fora do meu escopo (else)';
+//     console.log(elseScope);
 //   }
-//   userInfo();
+//   console.log(ifScope + ' o que estou fazendo aqui ? :O'); // Se necessário esta linha pode ser removida.
+// }
 
-  if (true) {
-    // inicio do escopo do if
-   let userAge = '20';
-    console.log(userAge); // 20
-    // fim do escopo do if
+// testingScope(true);
+
+const testingScope = () => {
+  if (escopo === true) {
+    let ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
+    ifScope = ifScope + ' ótimo, fui utilizada no escopo !';
+    console.log(ifScope);
+  } else {
+    let elseScope = 'Não devo ser utilizada fora do meu escopo (else)';
+    console.log(elseScope);
   }
-  console.log(userAge); // 20
+  // console.log(ifScope + ' o que estou fazendo aqui ? :O');
+  //   []
+  }
 
 
-  const userInfo = {
-    name: 'Cláudio',
-    id: '5489-2',
-    email: 'claudio@email.com',
-  };
-  
-  userInfo.name = 'João';
-  
-  console.log(userInfo); // { name: 'João', id: '5489-2', email: 'claudio@email.com' }
-
+testingScope(true);
